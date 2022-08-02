@@ -8,27 +8,38 @@ describe 'Tea subscription endpoints' do
     post api_v1_subscriptions_path(user_id: user1.id, tea_id: tea1.id, title: "surprise box tea subscription", annual_frequency: 6, price: 10)
     parsed_response = JSON.parse(response.body, symbolize_names: true)
 
-
-
     expected_response = {
-      "data": {
-        "type": "tea subscription",
-        "attributes": {
-          "user_id": "#{user1.id}",
-          "title": "surprise box tea subscription",
-          "annual_frequency": "6",
-          "price": "10",
-          "status": "active",
-          "tea_information": {
-            "id": "#{tea1.id}",
-            "title": "jasmine tea",
-            "description": "relaxing",
-            "temperature": "210",
-            "brew time": "5 minutes"
-          }
+      data: {
+        type: "tea subscription",
+        attributes: {
+          title: "surprise box tea subscription",
+          annual_frequency: "6",
+          price: "10"
         }
       }
     }
+
+
+
+    # expected_response = {
+    #   "data": {
+    #     "type": "tea subscription",
+    #     "attributes": {
+    #       "user_id": "#{user1.id}",
+    #       "title": "surprise box tea subscription",
+    #       "annual_frequency": "6",
+    #       "price": "10",
+    #       "status": "active",
+    #       "tea_information": {
+    #         "id": "#{tea1.id}",
+    #         "title": "jasmine tea",
+    #         "description": "relaxing",
+    #         "temperature": "210",
+    #         "brew time": "5 minutes"
+    #       }
+    #     }
+    #   }
+    # }
 
     expect(parsed_response).to eq(expected_response)
   end
