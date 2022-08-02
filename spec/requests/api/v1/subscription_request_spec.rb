@@ -20,7 +20,7 @@ describe 'Tea subscription endpoints' do
           "price": "10",
           "status": "active",
           "tea_information": {
-            "id": "#{tea1.id}"
+            "id": "#{tea1.id}",
             "title": "jasmine tea",
             "description": "relaxing",
             "temperature": "210",
