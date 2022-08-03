@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       # a subscribe under subscriptions makes more sense !
       # namespace :subscriptions do
       post '/subscribe', to: 'subscriptions#create'
+      post '/unsubscribe', to: 'subscriptions#unsubscribe'
 
       # end
     end
