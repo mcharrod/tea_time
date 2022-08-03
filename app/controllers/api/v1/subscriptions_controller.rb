@@ -6,9 +6,11 @@ class Api::V1::SubscriptionsController < ApplicationController
   end
 
   def unsubscribe
+    subscription = Subscription.find_by(id: params[:subscription_id])
+    subscription.status = "inactive"
+    subscription.save
+    render json: Api::V1::SubscriptionsSerializer.cancel_tea_subscription(subscription)
     # unsubscribe instead of delete bc the data needs to persist
     # for the next user story
-
-    
   end
 end
