@@ -6,8 +6,8 @@ describe 'Tea subscription endpoints' do
     tea1 = Tea.create!(title: "jasmine tea", description: "relaxing", temperature: 210, brew_time: "5 minutes")
 
     post api_v1_subscribe_path(user_id: user1.id, tea_id: tea1.id, title: "surprise box tea subscription", annual_frequency: 6, price: 10)
+    
     parsed_response = JSON.parse(response.body, symbolize_names: true)
-
     expected_response = {
       data: {
         type: "tea subscription",
