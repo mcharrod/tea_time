@@ -6,8 +6,9 @@ Rails.application.routes.draw do
       # namespace :subscriptions do
       post '/subscribe', to: 'subscriptions#create'
       post '/unsubscribe', to: 'subscriptions#unsubscribe'
-      
+      get '/subscriptions', to: 'subscriptions#index'
 
+      post '/users', to: 'users#create'
       # end
     end
   end
