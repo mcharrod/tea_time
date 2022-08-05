@@ -3,8 +3,16 @@ class Api::V1::SubscriptionsController < ApplicationController
     # add some error handling and guards to this later
 
     # if user.id + tea.id is valid / present
-    sub = Subscription.find_or_create_by!(user_id: params[:user_id], tea_id: params[:tea_id], title: params[:title], annual_frequency: params[:annual_frequency], price: params[:price], status: "active")
-    render json: Api::V1::SubscriptionsSerializer.new_tea_subscription(params, sub)
+    sub_checker = Subscription.find_by(user_id: params[:user_id], tea_id: params[:tea_id])
+
+    if sub_checker.present?
+      sub_checker.status = "active"
+      sub_checker.save
+      render json: Api::V1::SubscriptionsSerializer.new_tea_subscription(params, sub_checker)
+    else
+      sub = Subscription.create!(user_id: params[:user_id], tea_id: params[:tea_id], title: params[:title], annual_frequency: params[:annual_frequency], price: params[:price], status: "active")
+      render json: Api::V1::SubscriptionsSerializer.new_tea_subscription(params, sub)
+    end
   end
 
   def unsubscribe

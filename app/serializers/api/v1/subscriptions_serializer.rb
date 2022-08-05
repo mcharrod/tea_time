@@ -10,7 +10,7 @@ class Api::V1::SubscriptionsSerializer
           title: params[:title],
           annual_frequency: params[:annual_frequency],
           price: params[:price],
-          status: "active"
+          status: sub.status
         }
       }
     }
