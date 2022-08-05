@@ -122,7 +122,7 @@ response:
                 },
                 {
                     "subscription_id": 171,
-                    "tea_id": 156,
+                    "tea_id": 157,
                     "title": "Asian tea subscription mix",
                     "price": 10,
                     "status": "active",
@@ -130,7 +130,7 @@ response:
                 },
                 {
                     "subscription_id": 172,
-                    "tea_id": 156,
+                    "tea_id": 158,
                     "title": "surprise tea subscription",
                     "price": 10,
                     "status": "cancelled",
