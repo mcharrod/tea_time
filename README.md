@@ -4,7 +4,7 @@ Project specs for this take - home challenge can be found [here](https://mod4.tu
 
 ## Getting Started
 
-You will need to clone this repository down to your own local machine and run a local server, such as localhost:3000, to use this app. You will also need to use an API platform such as postman. This rails project uses RSpec for it's testing suite.
+You will need to clone this repository down to your own local machine and run a local server, such as localhost:3000, to use this app. You will also need to use an API platform such as postman and have Postgres installed to use this app. This rails project uses RSpec for it's testing suite.
 
 All of the gems necessary to run this app are included in the Gemfile. In your terminal, navigate to the tea_time folder from your terminal and run `bundle install`. While still in the terminal, run `rails db:{drop,create,migrate,seed}` to populate your database with seed data.
 
