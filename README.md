@@ -1,23 +1,18 @@
-# WELCOME TO TEA TIME!!!!!!! 
+# It's tea time, darling! 
 
-## Setup 
+Project specs for this take - home challenge can be found [here](https://mod4.turing.edu/projects/take_home/)
 
-make a request to localhost:3000/api/v1/subscribe
+## Getting Started
 
+You will need to clone this repository down to your own local machine and run a local server, such as localhost:3000, to use this app. You will also need to use an API platform such as postman. 
 
-To install the Tea Time Database for your own personal usage, please do the following:
-
-Fork this repository.
-Clone your forked repository to your local machine.
-In the terminal, navigate to the tea_time folder and run bundle install.
-While still in the terminal, run rails db:{drop,create,migrate,seed} to populate your database with seed data.
-
+All of the gems necessary to run this app are included in the Gemfile. In your terminal, navigate to the tea_time folder from your terminal and run `bundle install`. While still in the terminal, run `rails db:{drop,create,migrate,seed}` to populate your database with seed data.
 
 Make any changes to the database as necessary, and deploy to your database-hosting service of choice.
 
-to run localhost:3000 for example, the command 'rails s' will get you started. 
+To run  this app on localhost:3000, simply type into your terminal `rails s` to start your server. You will replace (url) in each of the endpoints with localhost:3000. 
 
-From here, you are ready to make requests to postman! 
+From here, you are ready to make requests to your API platform of choice! 
 
 ## Queries 
 
@@ -27,7 +22,7 @@ sample query
 
 endpoint: POST (url)/api/v1/subscribe
 
-request: 
+request body: 
 
 ```
 {
@@ -63,7 +58,7 @@ sample query
 
 endpoint: POST (url)/api/v1/unsubscribe
 
-request: 
+request body: 
 
 ```
 { "subscription_id": 1 } 
@@ -91,7 +86,7 @@ sample query
 
 endpoint: GET (url)/api/v1/subscriptions
 
-request: 
+request body: 
 
 ```
 { "user_id": "130"}
