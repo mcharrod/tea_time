@@ -6,6 +6,6 @@ tea1 = Tea.create!(title: "jasmine tea", description: "relaxing", temperature: 2
 tea2 = Tea.create!(title: "oolong tea", description: "invogorating", temperature: 180, brew_time: "5 minutes")
 tea3 = Tea.create!(title: "jade tea", description: "sparkly", temperature: 120, brew_time: "5 minutes")
 
-subscription1 = Subscription.create!(tea_id: tea1.id, user_id: user1.id, title: "jasmine tea subscription box", annual_frequency: 6, price: 5, status: "active")
-subscription2 = Subscription.create!(tea_id: tea2.id, user_id: user1.id, title: "oolong tea subscription box", annual_frequency: 6, price: 5, status: "active")
-subscription3 = Subscription.create!(tea_id: tea3.id, user_id: user1.id, title: "jade tea subscription box", annual_frequency: 6, price: 5, status: "active")
+subscription1 = Subscription.create!(tea_id: tea1.id, user_id: user1.id, title: "jasmine tea subscription box", frequency: 6, price: 5, status: "active")
+subscription2 = Subscription.create!(tea_id: tea2.id, user_id: user1.id, title: "oolong tea subscription box", frequency: 6, price: 5, status: "active")
+subscription3 = Subscription.create!(tea_id: tea3.id, user_id: user1.id, title: "jade tea subscription box", frequency: 6, price: 5, status: "active")

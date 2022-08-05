@@ -8,9 +8,9 @@ class Api::V1::SubscriptionsSerializer
           tea_id: sub.tea_id,
           user_id: sub.user_id,
           title: params[:title],
-          annual_frequency: params[:annual_frequency],
+          frequency: params[:frequency],
           price: params[:price],
-          status: "active"
+          status: sub.status
         }
       }
     }
@@ -42,7 +42,7 @@ class Api::V1::SubscriptionsSerializer
               title: sub.title,
               price: sub.price,
               status: sub.status,
-              frequency: sub.annual_frequency
+              frequency: sub.frequency
             }
           end
         }

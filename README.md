@@ -33,7 +33,7 @@ request body:
     "user_id": "130",
     "tea_id": "156",
     "title": "bi monthly subscription",
-    "annual_frequency": "6",
+    "frequency": "6",
     "price": "10"
 }
 ```
@@ -49,7 +49,7 @@ response:
             "tea_id": 156,
             "user_id": 130,
             "title": "British tea subscription",
-            "annual_frequency": "6",
+            "frequency": "6",
             "price": "10",
             "status": "active"
         }
