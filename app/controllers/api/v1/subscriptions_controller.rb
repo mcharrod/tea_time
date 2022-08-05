@@ -3,7 +3,7 @@ class Api::V1::SubscriptionsController < ApplicationController
     # add some error handling and guards to this later
 
     # if user.id + tea.id is valid / present
-    sub = Subscription.create!(user_id: params[:user_id], tea_id: params[:tea_id], title: params[:title], annual_frequency: params[:annual_frequency], price: params[:price], status: "active")
+    sub = Subscription.find_or_create_by!(user_id: params[:user_id], tea_id: params[:tea_id], title: params[:title], annual_frequency: params[:annual_frequency], price: params[:price], status: "active")
     render json: Api::V1::SubscriptionsSerializer.new_tea_subscription(params, sub)
   end
 
