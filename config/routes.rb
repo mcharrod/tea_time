@@ -9,6 +9,8 @@ Rails.application.routes.draw do
       get '/subscriptions', to: 'subscriptions#index'
 
       post '/users', to: 'users#create'
+
+      get '/teas', to: 'teas#index'
       # end
     end
   end

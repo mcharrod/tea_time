@@ -7,11 +7,16 @@ describe 'Tea subscription endpoints' do
 
     post api_v1_subscribe_path(user_id: user1.id, tea_id: tea1.id, title: "surprise box tea subscription", annual_frequency: 6, price: 10)
 
+    sub = Subscription.find_by({ user_id: user1.id, tea_id: tea1.id })
+
     parsed_response = JSON.parse(response.body, symbolize_names: true)
     expected_response = {
       data: {
         type: "tea subscription",
         attributes: {
+          subscription_id: sub.id,
+          tea_id: sub.tea_id,
+          user_id: sub.user_id,
           title: "surprise box tea subscription",
           annual_frequency: "6",
           price: "10",
@@ -35,9 +40,9 @@ describe 'Tea subscription endpoints' do
       data: {
         type: "tea subscription",
         attributes: {
+          tea_id: subscription.tea_id,
+          user_id: subscription.user_id,
           title: "jasmine tea subscription box",
-          annual_frequency: 6,
-          price: 5,
           status: "cancelled"
         }
       }
@@ -75,7 +80,8 @@ describe 'Tea subscription endpoints' do
           subscriptions:
           subscriptions_list.map do |subscription|
             {
-              id: subscription.id,
+              subscription_id: subscription.id,
+              tea_id: subscription.tea_id,
               title: subscription.title,
               price: subscription.price,
               status: subscription.status,
