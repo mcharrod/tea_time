@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2022_08_02_152441) do
     t.bigint "tea_id"
     t.bigint "user_id"
     t.string "title"
-    t.integer "annual_frequency"
+    t.integer "frequency"
     t.integer "price"
     t.string "status"
     t.datetime "created_at", null: false
