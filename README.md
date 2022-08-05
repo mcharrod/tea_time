@@ -14,6 +14,10 @@ To run  this app on localhost:3000, simply type into your terminal `rails s` to 
 
 From here, you are ready to make requests to your API platform of choice!
 
+## Database Design 
+
+![Database design](https://user-images.githubusercontent.com/64751946/183144802-25024421-dc4c-474e-9b67-2c99c1e07b33.png)
+
 ## Queries
 
 I have created this Postman testing suite [(link)](https://www.getpostman.com/collections/c859a863faf9954d47df) for this project with localhost:3000 as my server. Keep in mind, when you create your own database, you will need to update the id numbers for the requests according to the records in your own database if you choose to run my testing suite. For example, there may not be a subscription with the id number 4. For ease of use, I have addeed additional endpoints in this app to see the available teas to subscribe to. 
