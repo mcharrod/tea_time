@@ -71,14 +71,14 @@ describe 'Tea subscription endpoints' do
 
     parsed_response = JSON.parse(response.body, symbolize_names: true)
 
-    subscriptions_list = [subscription1, subscription2, subscription3]
+    # subscriptions_list = [subscription1, subscription2, subscription3]
 
     expected_response = {
       data: {
         type: "subscriptions list",
         attributes: {
           subscriptions:
-          subscriptions_list.map do |subscription|
+          user1.subscriptions.map do |subscription|
             {
               subscription_id: subscription.id,
               tea_id: subscription.tea_id,
