@@ -1,4 +1,4 @@
-# It's tea time, darling!
+# It's Tea Time, darling!
 
 Project specs for this take - home challenge can be found [here](https://mod4.turing.edu/projects/take_home/)
 
